@@ -1,9 +1,9 @@
 module StylesheetHelper
-  # include stylesheets
+  # Include stylesheets
   def stylesheets(options = {})
     [
       blueprint,
-      stylesheet("haml-forms.css"),
+      stylesheet("forms"),
       stylesheet(sass_files),
       page_stylesheets(options)
     ].join("\n")
@@ -20,15 +20,10 @@ module StylesheetHelper
   
   # Include Blueprint CSS
   def blueprint
-    [
-      stylesheet("blueprint/screen", :media => "screen, projection"),
-      stylesheet("blueprint/print", :media => "print"),
-      %{<!--[if IE]><link rel='stylesheet' href='/stylesheets/blueprint/ie.css' type='text/css' media='screen, projection'><![endif]-->},
-      stylesheet("blueprint-extra")
-    ].join("\n")
+    stylesheet("blueprint", :media => "screen, projection")
   end
 
-  # returns a list of *css file paths* for a sass directory
+  # Returns a list of *css file paths* for a sass directory
   def include_sass(path)
     # include common and component sass
     sass_styles = Dir["#{RAILS_ROOT}/public/stylesheets/sass/#{path}/*.sass"]
