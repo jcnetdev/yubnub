@@ -1,0 +1,13 @@
+!!!
+%html{html_attrs}
+  %head
+    %meta{"http-equiv" => "Content-type", "content" => "text/html; charset=utf-8"}
+    
+    = title :site => "[Site Name]"
+    = stylesheets
+    = javascripts
+  
+  %body
+    #body{:class => body_class}
+      = render :partial => "layouts/flash_boxes"
+      = yield

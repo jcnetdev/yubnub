@@ -1,0 +1,11 @@
+project_settings:
+  custom_layout:
+    column_count: 24
+    column_width: 30
+    gutter_width: 10
+  custom_css:
+    screen.css:
+      - blueprint-extra.css
+  plugins:
+    - fancy-type
+    - buttons

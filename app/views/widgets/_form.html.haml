@@ -1,0 +1,22 @@
+- haml_form_for @widget do |f|
+  
+  -# Display the validation messages if applicable
+  = error_messages_for :widget, :class => "error"
+  
+  -# Add a simple textfield for first name
+  = f.text_field :name
+
+  -# Add a simple textfield for last name
+  = f.text_field :price
+
+  -# Add a text area for description
+  = f.text_area :description
+  
+  -# Add a group of radio buttons defined by an array of options
+  = f.radio_group :is_in_stock, [["In Stock", "true"], ["Not in Stock", "false"]], :label => "In Stock?"
+
+  -# Add a submit button
+  .actions
+    = f.submit
+    or
+    = link_to "cancel", widgets_url

@@ -1,0 +1,8 @@
+%h1 Widgets
+- @widgets.each do |widget|
+  .widget
+    = widget.name
+    = link_to "edit", edit_widget_url(widget)
+    
+.actions
+  = link_to "Create New Widget", new_widget_url
