@@ -1,4 +1,5 @@
 class MailIncoming < ActiveRecord::Base
+  named_scope :unprocessed, :order => "created_on"
 
   # Create record from STDIN/variable
   #handler: "|/path/to/app/script/runner 'MailIncoming.receive(STDIN.read)'" 
@@ -8,21 +9,16 @@ class MailIncoming < ActiveRecord::Base
   end
   
   def self.find_and_process_email
-    IncomingEmailQueue.unprocessed.each do |mail|
+    unprocessed.each do |mail|
       begin
         if mail.parse then
           mail.destroy
         end
       rescue Exception => e
-        logger.error("Unable to send invite for #{mail.to_s}")
+        logger.error("Unable to process contents of incoming mail: #{mail.to_s}")
         logger.error(e)
       end        
     end
-  end
-  
-  # returns all the unsent invites
-  def self.unprocessed
-    find :all, :order => "created_on"
   end
   
   # Parse
@@ -40,7 +36,6 @@ class MailIncoming < ActiveRecord::Base
   
   
   def set_body(email)
-
     if email.multipart? then
       email.parts.each do |m|
         #puts "m.main_type: " + m.main_type
