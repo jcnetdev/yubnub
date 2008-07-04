@@ -1,0 +1,8 @@
+# CHANGE ME
+domain: "[YOUR DOMAIN].com" 
+
+address: "mail.authsmtp.com"
+port: 587 
+user_name: "ac31919"
+password: "cdfw2mcct"
+authentication: :login

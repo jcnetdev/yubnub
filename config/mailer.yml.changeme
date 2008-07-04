@@ -1,7 +1,0 @@
----
-:address: "[SMTP]" 
-:port: 587 
-:domain: "[domain]" 
-:user_name: "[username]" 
-:password: "[password]" 
-:authentication: :login

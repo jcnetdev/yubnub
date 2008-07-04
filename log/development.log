@@ -4365,3 +4365,7 @@ Rendering widgets/new
 Rendered widgets/_form (0.00729)
 Rendered layouts/_flash_boxes (0.00026)
 Completed in 0.02462 (40 reqs/sec) | Rendering: 0.01305 (53%) | DB: 0.00475 (19%) | 200 OK [http://127.0.0.1/widgets/new]
+DEPRECATION WARNING: config.action_view.cache_template_extensions option has been deprecated and has no affect. Please remove it from your config files.  See http://www.rubyonrails.org/deprecation for details. (called from send at /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/initializer.rb:455)
+** SubdomainFu: initialized properly
+DEPRECATION WARNING: config.action_view.cache_template_extensions option has been deprecated and has no affect. Please remove it from your config files.  See http://www.rubyonrails.org/deprecation for details. (called from send at /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/initializer.rb:455)
+** SubdomainFu: initialized properly
