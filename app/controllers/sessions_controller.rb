@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
   def create
     @login = Login.new(params[:login])
     self.current_user = User.login_with(@login)
-    
+
     if logged_in?
       if @login.remember_me?
         self.current_user.remember_me

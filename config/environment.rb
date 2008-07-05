@@ -103,11 +103,11 @@ Rails::Initializer.run do |config|
                                     :lib => 'app_config',
                                     :source => 'http://gems.github.com'
   
-  # auto_migrations
-  # ------
-  # Allows migrations to be run automatically based on updating the schema.rb
-  # ------
-  config.gem 'jcnetdev-auto_migrations', :version => '>= 1.1',
+  # # auto_migrations
+  # # ------
+  # # Allows migrations to be run automatically based on updating the schema.rb
+  # # ------
+  config.gem 'jcnetdev-auto_migrations', :version => '>= 1.2',
                                          :lib => 'auto_migrations',
                                          :source => 'http://gems.github.com'
 

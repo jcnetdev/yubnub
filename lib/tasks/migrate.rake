@@ -15,3 +15,7 @@ Rake::Task["db:migrate"].overwrite do
   Rake::Task["db:auto:migrate"].invoke
   Rake::Task["db:seed"].invoke
 end
+# 
+# task :wtf => :environment do
+#   puts Rails.env
+# end

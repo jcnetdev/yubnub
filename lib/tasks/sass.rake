@@ -1,13 +1,8 @@
 # Make sure we load an environment (default to prod)
-
-RAILS_ENV="production" unless ENV["RAILS_ENV"]
-require File.dirname(__FILE__) + '/../../config/environment'
-
 require 'haml'
 require 'sass'
 
 namespace :sass do
-  
   desc 'Clean and Build Sass Templates'
   task :rebuild => [:clean, :build]
   

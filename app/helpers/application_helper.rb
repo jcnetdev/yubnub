@@ -61,6 +61,11 @@ module ApplicationHelper
     action == "edit" || action == "update"
   end
   
+  # Whether or not to use caching
+  def use_cache?
+    ActionController::Base.perform_caching
+  end
+  
   def paging(page_data, style = :sabros)
     return unless page_data.class == WillPaginate::Collection    
     will_paginate(page_data, :class => "pagination #{style}", :inner_window => 3)

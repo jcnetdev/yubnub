@@ -11,7 +11,7 @@ module StylesheetHelper
 
   # List of Sass FIles
   def sass_files
-    if AppConfig.minimize
+    if use_cache?
       ["min/application", "min/common", "min/components"]
     else
       ["application", include_sass("common"), include_sass("components")]

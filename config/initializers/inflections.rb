@@ -5,6 +5,7 @@
 Inflector.inflections do |inflect|
   # inflect.plural /^(ox)$/i, '\1en'
   # inflect.singular /^(ox)en/i, '\1'
-  # inflect.irregular 'person', 'people'
-  inflect.uncountable %w( mail_incoming mail_outgoing )
+
+  inflect.irregular 'mail_outgoing', 'mail_outgoing'
+  inflect.irregular 'mail_incoming', 'mail_incoming'
 end
