@@ -1,5 +1,5 @@
 # This file is auto-generated from the current state of the database. Instead of editing this file, 
-# please use the migrations feature of ActiveRecord to incrementally modify your database, and
+# please use the migrations feature of Active Record to incrementally modify your database, and
 # then regenerate this schema definition.
 #
 # Note that this schema.rb definition is the authoritative source for your database schema. If you need
@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 4) do
+ActiveRecord::Schema.define(:version => 1) do
 
   create_table "mail_incoming", :force => true do |t|
     t.text     "mail"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 4) do
   create_table "mail_outgoing", :force => true do |t|
     t.string   "from"
     t.string   "to"
-    t.integer  "last_send_attempt", :default => 0
+    t.integer  "last_send_attempt", :limit => 11, :default => 0
     t.text     "mail"
     t.datetime "created_on"
   end
@@ -41,11 +41,16 @@ ActiveRecord::Schema.define(:version => 4) do
 
   create_table "widgets", :force => true do |t|
     t.string   "name"
-    t.integer  "price",       :limit => 10, :precision => 10, :scale => 0
+    t.integer  "price",       :limit => 10
     t.text     "description"
     t.boolean  "is_in_stock"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table :photos, :force => true do |t|
+    t.string "url"
+    t.timestamps
   end
 
 end

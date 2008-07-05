@@ -17,10 +17,10 @@
 development:
   adapter: mysql
   encoding: utf8
-  database: blank_development
+  host: localhost
+  database: base_development
   username: root
   password:
-  host: localhost
 
 # Warning: The database defined as 'test' will be erased and
 # re-generated from your development database when you run 'rake'.
@@ -28,15 +28,15 @@ development:
 test:
   adapter: mysql
   encoding: utf8
-  database: blank_test
+  host: localhost
+  database: base_test
   username: root
   password:
-  host: localhost
 
 production:
   adapter: mysql
   encoding: utf8
-  database: blank_production
+  host: localhost
+  database: base_production
   username: root
   password: 
-  host: localhost

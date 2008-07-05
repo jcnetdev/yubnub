@@ -16,7 +16,7 @@ end
 
 namespace :paperclip do
   desc "Regenerates thumbnails for a given CLASS (and optional ATTACHMENT)"
-  task :refresh => :environment do
+  task :refresh do
     klass     = obtain_class
     names     = obtain_attachments
     instances = klass.find(:all)

@@ -4369,3 +4369,10 @@ DEPRECATION WARNING: config.action_view.cache_template_extensions option has bee
 ** SubdomainFu: initialized properly
 DEPRECATION WARNING: config.action_view.cache_template_extensions option has been deprecated and has no affect. Please remove it from your config files.  See http://www.rubyonrails.org/deprecation for details. (called from send at /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/initializer.rb:455)
 ** SubdomainFu: initialized properly
+DEPRECATION WARNING: config.action_view.cache_template_extensions option has been deprecated and has no affect. Please remove it from your config files.  See http://www.rubyonrails.org/deprecation for details. (called from send at /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/initializer.rb:455)
+** SubdomainFu: initialized properly
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+DEPRECATION WARNING: config.action_view.cache_template_extensions option has been deprecated and has no affect. Please remove it from your config files.  See http://www.rubyonrails.org/deprecation for details. (called from send at /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/initializer.rb:455)
+** SubdomainFu: initialized properly
+DEPRECATION WARNING: config.action_view.cache_template_extensions option has been deprecated and has no affect. Please remove it from your config files.  See http://www.rubyonrails.org/deprecation for details. (called from send at /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/initializer.rb:455)
+** SubdomainFu: initialized properly

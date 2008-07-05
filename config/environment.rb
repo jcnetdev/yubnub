@@ -57,6 +57,26 @@ Rails::Initializer.run do |config|
   # Make Active Record use UTC-base instead of local time
   # config.active_record.default_timezone = :utc
 
+  # standard gems
+  config.gem "haml", :version => ">= 2.0.0"
+
+  # ssl_requirement
+  # ------
+  # Allow controller actions to force SSL on specific parts of the site
+  # ------
+  config.gem 'jcnetdev-ssl_requirement', :version => '>= 1.0',
+                                         :lib => 'ssl_requirement',
+                                         :source => 'http://gems.github.com'
+
+  # exception_notification
+  # ------
+  # Allows unhandled exceptions to be emailed on production
+  # ------
+  config.gem 'jcnetdev-exception_notification', :version => '>= 1.1',
+                                                :lib => 'exception_notification',
+                                                :source => 'http://gems.github.com'
+  
+  
   # Rails Plugins (via gems)
 
   # active_record_without_table
@@ -90,7 +110,7 @@ Rails::Initializer.run do |config|
   config.gem 'jcnetdev-auto_migrations', :version => '>= 1.1',
                                          :lib => 'auto_migrations',
                                          :source => 'http://gems.github.com'
-  
+
   # better_partials
   # ------
   # Makes calling partials in views look better and more fun
@@ -99,21 +119,14 @@ Rails::Initializer.run do |config|
                                          :lib => 'better_partials',
                                          :source => 'http://gems.github.com'
   
-  # exception_notification
-  # ------
-  # Allows unhandled exceptions to be emailed on production
-  # ------
-  config.gem 'jcnetdev-exception_notification', :version => '>= 1.0',
-                                                :lib => 'exception_notification',
-                                                :source => 'http://gems.github.com'
 
   # form_fu
   # ------
   # Allows easier rails form creation and processing
   # ------
-  config.gem 'neorails-form_fu', :version => '>= 1.0',
-                                 :lib => 'form_fu',
-                                 :source => 'http://gems.github.com'
+  # config.gem 'neorails-form_fu', :version => '>= 1.0',
+  #                                :lib => 'form_fu',
+  #                                :source => 'http://gems.github.com'
                                        
   # paperclip
   # ------
@@ -130,6 +143,8 @@ Rails::Initializer.run do |config|
   config.gem 'jcnetdev-seed-fu', :version => '>= 1.0',
                                  :lib => 'seed-fu',
                                  :source => 'http://gems.github.com'
+
+
   # subdomain-fu
   # ------
   # Allows easier subdomain selection
@@ -158,9 +173,9 @@ Rails::Initializer.run do |config|
   # ------
   # Adds view helpers for titles, stylesheets, javascripts, and common tags
   # ------
-  config.gem 'neorails-view_fu', :version => '>= 1.0',
-                                 :lib => 'view_fu',
-                                 :source => 'http://gems.github.com'
+  # config.gem 'neorails-view_fu', :version => '>= 1.0',
+  #                                :lib => 'view_fu',
+  #                                :source => 'http://gems.github.com'
   
   # OPTIONAL PLUGINS
 
@@ -180,13 +195,6 @@ Rails::Initializer.run do |config|
   #                                         :lib => 'acts_as_readable',
   #                                         :source => 'http://gems.github.com'
 
-  # ssl_requirement
-  # ------
-  # Allow controller actions to force SSL on specific parts of the site
-  # ------
-  # config.gem 'jcnetdev-ssl_requirement', :version => '>= 1.0',
-  #                                        :lib => 'ssl_requirement',
-  #                                        :source => 'http://gems.github.com'
 
   # sms-fu
   # ------
