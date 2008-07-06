@@ -35,3 +35,10 @@ rake db:create db:migrate
 
 4) Start Server
 script/server
+
+
+== Notes
+
+To add a bunch of junk data (to test paging, etc..) run 
+
+rake yubnub:junk_data

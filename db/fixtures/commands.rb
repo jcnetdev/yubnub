@@ -84,7 +84,6 @@ DESCRIPTION
   s.golden_egg_date = DateTime.now
 end
 
-
 # KERNEL - GE
 Command.seed(:name) do |s|
   s.name = "ge"
@@ -108,12 +107,4 @@ DESCRIPTION
 
 "
   s.golden_egg_date = DateTime.now
-end
-
-500.times do |i|
-  Command.seed(:name) do |s|
-    s.name = "test-#{i}"
-    s.url = "http://www.testing.com/?#{i}hello=%s"
-    s.description = "#{i} Test stuff out"
-  end
 end

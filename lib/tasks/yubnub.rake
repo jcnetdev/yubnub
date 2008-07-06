@@ -21,5 +21,15 @@ namespace :yubnub do
     end
   end
   
+  desc "Add Junk Data"
+  task :junk_data => :environment do
+    500.times do |i|
+      Command.seed(:name) do |s|
+        s.name = "test-#{i}"
+        s.url = "http://www.testing.com/?#{i}hello=%s"
+        s.description = "#{i} Test stuff out"
+      end
+    end
+  end
   
 end
