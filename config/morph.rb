@@ -79,9 +79,9 @@ namespace :morph do
   # You can choose to release a different version than head by setting the 
   # Environment variable 'REL_VER' to the version to use.
   task :get_code do
-    on_rollback do      
-      remove_files([morph_tmp_dir, 'code_update.tar.gz'])
-    end
+    # on_rollback do      
+    #   remove_files([morph_tmp_dir, 'code_update.tar.gz'])
+    # end
       
     # Make sure we have a repo to work from!
     abort("***ERROR: Must specify the repository to check out from! See line #{repo_line_number} in #{__FILE__}.") if !repository
@@ -90,9 +90,6 @@ namespace :morph do
       # Clean up previous deploys   
       remove_files([morph_tmp_dir, 'code_update.tar.gz'])
       
-      # unpack gems
-      system("rake RAILS_ENV=production gems:unpack")
-
       #get latest code from from the repository 
       say("Downloading the code from the repository...")
       system(strategy.send(:command))
@@ -103,6 +100,10 @@ namespace :morph do
         abort "*** ERROR: Rails directories are missing. Please make sure your set :repository is correct!" if !File.exist?("#{morph_tmp_dir}#{e}")
       end
 
+      # unpack our rubygems dependencies and inject them into the morph_tmp
+      system("rake RAILS_ENV=production gems:unpack")
+      system("cp -Rf vendor/gems #{morph_tmp_dir}/vendor") 
+      
       #create archive
       system("tar -C #{morph_tmp_dir} -czf code_update.tar.gz --exclude='./.*' .")
       abort('*** ERROR: Failed to tar the file for upload.') if $?.to_i != 0
@@ -111,7 +112,7 @@ namespace :morph do
       flist = `tar tzf code_update.tar.gz`
       all_in = flist.include?('lib/') && flist.include?('app/') && flist.include?('config/environment.rb')
       abort "***ERROR: code archive is missing the rails directories. Please check your checkout and tar" if !all_in
-
+      
       remove_files([morph_tmp_dir])
     end
   end

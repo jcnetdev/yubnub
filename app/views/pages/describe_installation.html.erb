@@ -186,8 +186,8 @@ says: "I found out this morning that the newest versions of Quicksilver do not c
 for my QS-to-YubNub hack) pre-installed . . . the plug-in is required . . . it is installed by
 default in the Panther-compatible versions of QS."<br />
 <br />
-<b>Linux integration.</b> <a href="http://www.yubnub.org/parse?command=g+bsittler">Benjamin Sittler</a> has written
-a <a href="http://www.yubnub.org/yubnub.sh">bash script</a> to invoke YubNub from the Linux command line. Benjamin
+<b>Linux integration.</b> <a href="/parse?command=g+bsittler">Benjamin Sittler</a> has written
+a <a href="/yubnub.sh">bash script</a> to invoke YubNub from the Linux command line. Benjamin
 <a href="http://jonaquino.blogspot.com/2005/06/yubnub-my-entry-for-rails-day-24-hour.html#c111932733668772089">adds</a>:
 "save it, change it's permissions to make it executable, and (optionally) set the BROWSER environment variable to
 point to the web browser of your choice (i use w3m because it's pipe-friendly) and install it in a directory
@@ -367,7 +367,7 @@ He calls it <a href="http://raf2005.ath.cx/rafsoftware/yubnubberweb/index.html">
 <b>Konfabulator integration (Windows).</b> Zheng has created a
 <a href="http://www.klogs.org/temp/YubNub.widget">Konfabulator widget</a> for YubNub.
 More details on his blog post
-(<a href="http://yubnub.org/parse?command=autotr+http://www.klogs.org/archives/2005/07/konfabulatoraey.html">English</a>,
+(<a href="/parse?command=autotr+http://www.klogs.org/archives/2005/07/konfabulatoraey.html">English</a>,
 <a href="http://www.klogs.org/archives/2005/07/konfabulatoraey.html">Chinese</a>).
 <div class="blockquote">
   <a href="http://www.klogs.org/temp/YubNub.widget"><img src="/images/yubnub_konfabulator.jpg"></a>
@@ -450,11 +450,11 @@ And " ls" (note leading space!) bounces to http://www.yubnub.org/kernel/ls?args=
 <b>YubNub search bar (browser-independent).</b> Inspired by Felipe
 Gomes' <a href="http://projects.felipc.com/gcl/">Google Command
 Line</a>, Sean O'Hagan has written a neat <a
-href="http://yubnub.org/parse?command=man+cmdline">YubNub
+href="/parse?command=man+cmdline">YubNub
 search-bar</a> that lives at the bottom of your browser. The neat
 thing about it is that it works in almost any browser, because it uses
 a simple HTML frame. To start it up, simply type <a
-href="http://yubnub.org/parse?command=cmdline">cmdline</a> into
+href="/parse?command=cmdline">cmdline</a> into
 YubNub. Then try typing "gim porsche" into the command-line at the
 bottom of the screen (or a URL like google.com). <b>Update:</b>
 Felipe Gomes has added YubNub to the original
@@ -542,7 +542,7 @@ If the focus is on the start button, hitting the tab key will activate
 the address bar and you can start typing the command."</i><br/>
 <br />
 <b>YubNub bookmarklet.</b> Brian Armknecht has written a
-<a href='javascript:q = "" + (window.getSelection ? window.getSelection() : document.getSelection ? document.getSelection() : document.selection.createRange().text); p = prompt("Yubnub search type? ... ", ""); if (q!=null) location="http://yubnub.org/parse?command=" + escape(p).replace(/ /g, "+") + " " + escape(q).replace(/ /g, "+"); void 0'>bookmarklet for YubNub</a>
+<a href='javascript:q = "" + (window.getSelection ? window.getSelection() : document.getSelection ? document.getSelection() : document.selection.createRange().text); p = prompt("Yubnub search type? ... ", ""); if (q!=null) location="/parse?command=" + escape(p).replace(/ /g, "+") + " " + escape(q).replace(/ /g, "+"); void 0'>bookmarklet for YubNub</a>
 (works on Firefox; doesn't seem to work on IE). Brian writes:
 <i>"There are occasions where I'd like to perform a YubNub command on some text
 on a webpage (e.g. a word I'd like to define, or an address I'd like to map).
@@ -639,7 +639,7 @@ function yubnub( args)
     readFromMiniBuffer(open_url_in_prompt(prefix,"yubnub command"), // prompt
                        null,                                        // initval
                        get_bm_strings(),                            // history
-                       function(url) { getBrowser().newBrowser("http://www.yubnub.org/parse?command=" + url);}); // callback
+                       function(url) { getBrowser().newBrowser("/parse?command=" + url);}); // callback
 }
 add_command("y", yubnub, [["p"]]);
 </code></pre></div>

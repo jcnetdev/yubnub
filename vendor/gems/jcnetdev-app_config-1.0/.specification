@@ -1,0 +1,78 @@
+--- !ruby/object:Gem::Specification 
+name: jcnetdev-app_config
+version: !ruby/object:Gem::Version 
+  version: "1.0"
+platform: ruby
+authors: 
+- Jacques Crocker
+- Christopher J. Bottaro
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2008-07-04 00:00:00 -07:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: rails
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: "2.1"
+    version: 
+description: Allow application wide configuration settings via YML files
+email: railsjedi@gmail.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- README
+- README.rdoc
+- app_config.gemspec
+- init.rb
+- lib/app_config.rb
+- rails/init.rb
+- test/app_config.yml
+- test/app_config_test.rb
+- test/development.yml
+- test/empty1.yml
+- test/empty2.yml
+has_rdoc: false
+homepage: http://github.com/jcnetdev/app_config
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- bin
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.2.0
+signing_key: 
+specification_version: 2
+summary: Application level configuration
+test_files: 
+- test/app_config.yml
+- test/app_config_test.rb
+- test/development.yml
+- test/empty1.yml
+- test/empty2.yml

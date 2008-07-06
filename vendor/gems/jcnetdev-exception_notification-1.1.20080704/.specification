@@ -1,0 +1,82 @@
+--- !ruby/object:Gem::Specification 
+name: jcnetdev-exception_notification
+version: !ruby/object:Gem::Version 
+  version: 1.1.20080704
+platform: ruby
+authors: 
+- Jacques Crocker
+- Jamis Buck
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2008-07-04 00:00:00 -07:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: rails
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: "2.1"
+    version: 
+description: ""
+email: railsjedi@gmail.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- README
+files: 
+- README
+- exception_notification.gemspec
+- init.rb
+- lib/exception_notifiable.rb
+- lib/exception_notifier.rb
+- lib/exception_notifier_helper.rb
+- lib/exception_notification.rb
+- rails/init.rb
+- views/exception_notifier/_backtrace.rhtml
+- views/exception_notifier/_environment.rhtml
+- views/exception_notifier/_inspect_model.rhtml
+- views/exception_notifier/_request.rhtml
+- views/exception_notifier/_session.rhtml
+- views/exception_notifier/_title.rhtml
+- views/exception_notifier/exception_notification.rhtml
+- test/exception_notifier_helper_test.rb
+- test/test_helper.rb
+has_rdoc: true
+homepage: http://github.com/jcnetdev/exception_notification
+post_install_message: 
+rdoc_options: 
+- --main
+- README
+require_paths: 
+- bin
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.2.0
+signing_key: 
+specification_version: 2
+summary: Allows unhandled exceptions to be captured and sent via email
+test_files: 
+- test/exception_notifier_helper_test.rb
+- test/test_helper.rb

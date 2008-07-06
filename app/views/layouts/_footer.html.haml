@@ -2,7 +2,7 @@
   <a href="http://jonaquino.blogspot.com/2005/06/yubnub-my-entry-for-rails-day-24-hour.html">What Is This Thing?</a> 
   |
   = link_to_unless_current('List All Commands (ls)', commands_url)
-  <a href="http://yubnub.org/commands.xml"><img src="/images/xml_button.gif" alt="Subscribe to RSS feed"></a> 
+  <a href="/commands.xml"><img src="/images/xml_button.gif" alt="Subscribe to RSS feed"></a> 
   |
   = link_to_unless_current('Create a New Command', new_command_url) 
   |
@@ -13,7 +13,7 @@
   = link_to_unless_current('Most-Used Commands', commands_url) 
   |
   = link_to_unless_current('Golden Eggs (Notable Commands)', :controller => 'parser', :action => 'parse', :cmd => 'ge')
-  <a href="http://yubnub.org/golden_eggs.xml"><img src="/images/xml_button.gif" alt="Subscribe to RSS feed"/></a>  
+  <a href="/kernel/golden_eggs.xml"><img src="/images/xml_button.gif" alt="Subscribe to RSS feed"/></a>  
   |
   = link_to_unless_current("Jeremy's Picks", picks_url)
   = br

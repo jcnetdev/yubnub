@@ -1,0 +1,72 @@
+--- !ruby/object:Gem::Specification 
+name: jcnetdev-auto_migrations
+version: !ruby/object:Gem::Version 
+  version: 1.2.20080704
+platform: ruby
+authors: 
+- PJ Hyett
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2008-07-04 00:00:00 -07:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: rails
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: "2.1"
+    version: 
+description: Forget migrations, auto-migrate!
+email: pjhyett@gmail.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- README
+files: 
+- MIT-LICENSE
+- README
+- Rakefile
+- auto_migrations.gemspec
+- init.rb
+- lib/auto_migrations.rb
+- rails/init.rb
+- tasks/auto_migrations_tasks.rake
+- test/auto_migrations_test.rb
+has_rdoc: true
+homepage: http://github.com/pjhyett/auto_migrations
+post_install_message: 
+rdoc_options: 
+- --main
+- README
+require_paths: 
+- bin
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.2.0
+signing_key: 
+specification_version: 2
+summary: Allows migrations to be run automatically based on updating the schema.rb
+test_files: 
+- test/auto_migrations_test.rb
