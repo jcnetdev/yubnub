@@ -1,5 +1,37 @@
 == YubNub
 
-To install:
+This is the source code for YubNub, a (social) command-line for the web.
 
-1) 
+YubNub was written by Jonathan Aquino for the Rails Day 2005 programming competition.
+You can reach Jonathan at jonathan.aquino@gmail.com.
+
+http://jonaquino.blogspot.com/2005/06/yubnub-my-entry-for-rails-day-24-hour.html
+
+This source code is made available under the MIT License (see LICENSE_YUBNUB).
+
+== About YubNub
+
+YubNub is a command-line for the web. After setting it up on your browser, you simply type "gim porsche 911" to do a Google Image Search for pictures of Porsche 911 sports cars. Type "random 49" to return random numbers between 1 and 49, courtesy of random.org. And best of all, you can make a new command by giving YubNub an appropriate URL.
+
+www.yubnub.org
+
+== Rails 2.1 Upgrade
+
+Refactored and Upgraded to Rails 2.1 by Jacques Crocker (railsjedi@gmail.com)
+
+View source at http://github.com/jcnetdev/yubnub
+
+== Installation Instructions
+
+1) Get Codebase
+git clone git://github.com/jcnetdev/yubnub.git
+cd yubnub
+
+2) Install Gems
+rake gems:install
+
+3) Setup DB and Seed
+rake db:create db:migrate
+
+4) Start Server
+script/server
