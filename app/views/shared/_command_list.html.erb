@@ -23,7 +23,7 @@
     <span class="nominate hint"><a class="hint" href="mailto:jonathan.aquino@gmail.com?subject=Nomination for a YubNub Golden Egg: <%=CGI.escape(command.name)%>&body=Hey Jon, there's a great command that I want to see on the Golden Egg list: <%=CGI.escape(command.name)%>">
     Nominate</a> - </span>
   <% end %>
-  <%= link_to('Description', {:action => 'man', :args => command.name}, {:class => 'description hint'}) %>
+  <%= link_to('Description', man_url(:args => command.name), :class => 'description hint') %>
   -
   <span class="implementation hint"><%=h command.display_url %></span><br />
   <br />

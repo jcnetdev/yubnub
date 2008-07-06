@@ -12,7 +12,7 @@
   = br
   = link_to_unless_current('Most-Used Commands', commands_url) 
   |
-  = link_to_unless_current('Golden Eggs (Notable Commands)', :controller => 'parser', :action => 'parse', :cmd => 'ge')
+  = link_to_unless_current('Golden Eggs (Notable Commands)', parse_url(:cmd => 'ge'))
   <a href="/kernel/golden_eggs.xml"><img src="/images/xml_button.gif" alt="Subscribe to RSS feed"/></a>  
   |
   = link_to_unless_current("Jeremy's Picks", picks_url)

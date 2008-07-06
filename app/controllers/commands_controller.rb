@@ -4,7 +4,10 @@ class CommandsController < ApplicationController
     @commands = Command.recent.paginate :page => params[:page]
     respond_to do |format|
       format.html
-      # format.xml
+      format.xml do
+        @feed_title = "YubNub Command List"
+        @feed_description = "Newly created commands on YubNub"
+      end
     end
   end
   

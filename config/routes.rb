@@ -7,7 +7,19 @@ ActionController::Routing::Routes.draw do |map|
   
   # Dynamic
   map.parse "/parse", :controller => 'parser', :action => 'parse'
-  map.commands "/commands", :controller => 'kernel', :action => 'most_used_commands'
+
+  # Kernel
+  map.man "/kernel/man", :controller => "kernel", :action => "man"
+  map.connect "/kernel/man.:format", :controller => "kernel", :action => "man"
+
+  map.most_used_commands "/kernel/most_used_commands", :controller => "kernel", :action => "most_used_commands"
+  map.connect "/kernel/most_used_commands.:format", :controller => "kernel", :action => "most_used_commands"
+
+  map.golden_eggs "/kernel/golden_eggs", :controller => "kernel", :action => "golden_eggs"
+  map.connect "/kernel/golden_eggs.:format", :controller => "kernel", :action => "golden_eggs"
+
+  map.ls "/kernel/ls", :controller => "kernel", :action => "ls"
+  map.connect "/kernel/ls.:format", :controller => "kernel", :action => "ls"
 
 
   # Pages

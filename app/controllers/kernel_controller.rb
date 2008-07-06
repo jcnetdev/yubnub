@@ -8,13 +8,17 @@ class KernelController < ApplicationController
 
     respond_to do |format|
       format.html
-      # format.xml
+      format.xml do
+        @feed_title = "#{AppConfig.site_name}: #{params[:cmd]}"
+        @feed_description = "Listing commands with: #{params[:args]}"
+        render :template => "commands/index.xml.builder"
+      end
     end
   end
 
   def man
     if params['args'].blank? then
-      redirect_to :action => 'man', :args => 'man'
+      redirect_to man_url(:args => 'man')
       return      
     end
     
@@ -25,7 +29,12 @@ class KernelController < ApplicationController
       format.html do
         render(:action => :no_manual_entry) unless @command
       end
-      # format.xml
+      format.xml do 
+        @feed_title = "#{AppConfig.site_name}: man #{@command_name}"
+        @feed_description = "Usage description for: #{@command_name}"
+        @commands = [@command]
+        render :template => "commands/index.xml.builder"
+      end
     end
   end
 
@@ -38,7 +47,11 @@ class KernelController < ApplicationController
     
     respond_to do |format|
       format.html
-      # format.xml
+      format.xml do
+        @feed_title = "#{AppConfig.site_name} Golden Eggs"
+        @feed_description = "Welcome to #{AppConfig.site_name} Golden Eggs! The Golden Eggs are #{AppConfig.site_name} commands that people seem to find particularly useful and interesting. If you want to nominate a #{AppConfig.site_name} command for this list, email Jon about it."
+        render :template => "commands/index.xml.builder"
+      end
     end
   end
 
