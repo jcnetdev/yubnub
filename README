@@ -30,8 +30,8 @@ cd yubnub
 2) Install Gems
 rake gems:install
 
-3) Setup DB and Seed
-rake db:create db:migrate
+3) Setup DB and Seed Data
+rake db:create db:schema:load db:migrate
 
 4) Start Server
 script/server
