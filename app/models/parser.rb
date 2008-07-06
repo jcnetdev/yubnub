@@ -38,9 +38,9 @@ class Parser
       self.command.uses += 1
       self.command.last_use_date = Time.now
       self.command.save unless self.command.new_record?
-    elsif tokens.size > 1 and self.command_name and self.command_name.length < 5
-      # tried to search for something but failed
-      return nil
+    # elsif tokens.size > 1 and self.command_name and self.command_name.length < 5
+    #   # tried to search for something but failed
+    #   return nil
     else
       # find default if passed in
       self.command = Command.by_name(@default)

@@ -1,18 +1,14 @@
 require File.dirname(__FILE__) + '/../test_helper'
 require File.dirname(__FILE__) + '/../../app/helpers/application_helper.rb'
-require 'command_controller'
 
 # Re-raise errors caught by the controller.
-class CommandController; def rescue_action(e) raise e end; end
+class CommandsController; def rescue_action(e) raise e end; end
 
-class CommandControllerTest < Test::Unit::TestCase
-  include ApplicationHelper
-  include CommandHelper
-  include ParserHelper
+class CommandsControllerTest < Test::Unit::TestCase
   fixtures :commands, :banned_url_patterns
 
   def setup
-    @controller = CommandController.new
+    @controller = CommandsController.new
     @request    = ActionController::TestRequest.new
     @response   = ActionController::TestResponse.new
   end
@@ -34,7 +30,7 @@ class CommandControllerTest < Test::Unit::TestCase
     pattern = BannedUrlPattern.new
     pattern.pattern = ''
     pattern.save
-    post :add_command, {'x' => '', 'command' => {'name' => 'aaaaa', 'url' => 'http://aaaaa.com', 'description' => 'A great site!'}}
+    post :create, {'x' => '', 'command' => {'name' => 'aaaaa', 'url' => 'http://aaaaa.com', 'description' => 'A great site!'}}
     assert_redirected_to :action => 'index'
     assert_equal(1, Command.find_all("url LIKE 'http://aaaaa.com'").size)
   end
