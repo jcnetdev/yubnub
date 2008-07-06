@@ -1,4 +1,4 @@
-# MySQL (default setup).  Versions 4.1 and 5.0 are recommended.
+\# MySQL (default setup).  Versions 4.1 and 5.0 are recommended.
 #
 # Install the MySQL driver:
 #   gem install mysql
@@ -18,7 +18,7 @@ development:
   adapter: mysql
   encoding: utf8
   host: localhost
-  database: base_development
+  database: yubnub_development
   username: root
   password:
 
@@ -29,7 +29,7 @@ test:
   adapter: mysql
   encoding: utf8
   host: localhost
-  database: base_test
+  database: yubnub_test
   username: root
   password:
 
@@ -37,6 +37,6 @@ production:
   adapter: mysql
   encoding: utf8
   host: localhost
-  database: base_production
+  database: yubnub_production
   username: root
   password: 

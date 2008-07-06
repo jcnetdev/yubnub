@@ -1,8 +1,0 @@
-Put sitewide common stylesheets here. Use class names on the top level to filter styles
-
-e.g.
-
-file-name: "style-name.sass"
-top-level selector: .style-name
-
-

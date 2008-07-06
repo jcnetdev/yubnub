@@ -1,8 +1,0 @@
-Put sitewide component stylesheets here. Use id names on the top level to filter styles
-
-e.g.
-
-file-name: "component_name.sass"
-top-level selector: #component_name
-
-

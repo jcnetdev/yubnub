@@ -1,7 +1,6 @@
 -# Set flash[:notice] to display a notice panel
 - if flash[:notice]
-  .flash.notice= flash[:notice]
-- if flash[:success]
-  .flash.success= flash[:success]
+  .flash.message{:style => "margin-bottom:15px"}= flash[:notice]
+
 - if flash[:error]
-  .flash.error= flash[:error]
+  .flash.warning{:style => "margin-bottom:15px"}= flash[:error]

@@ -1,5 +1,5 @@
 # CHANGE ME
-site_name: "[Your Site]"
-site_url: "http://YOURSITE"
-require_email_activation: true
+site_name: "YubNub"
+site_url: "http://www.yubnub.com"
+default_command: g
   

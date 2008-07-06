@@ -1,0 +1,4 @@
+<% form_tag(parse_url, :method => :get, :name => "input_box") do %>
+  <input type="text" name="cmd" size="<%= size %>" value="<%= params["cmd"] %>"/>
+  <input type="submit" value="Enter" />
+<% end %>

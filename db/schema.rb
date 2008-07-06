@@ -11,39 +11,18 @@
 
 ActiveRecord::Schema.define(:version => 0) do
 
-  create_table "mail_incoming", :force => true do |t|
-    t.text     "mail"
-    t.datetime "created_on"
+  create_table "banned_url_patterns", :force => true do |t|
+    t.string "pattern"
   end
 
-  create_table "mail_outgoing", :force => true do |t|
-    t.string   "from"
-    t.string   "to"
-    t.integer  "last_send_attempt", :limit => 11, :default => 0
-    t.text     "mail"
-    t.datetime "created_on"
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "login"
-    t.string   "email"
-    t.string   "crypted_password",          :limit => 40
-    t.string   "salt",                      :limit => 40
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "remember_token"
-    t.datetime "remember_token_expires_at"
-    t.string   "activation_code",           :limit => 40
-    t.datetime "activated_at"
-    t.string   "state",                                   :default => "passive"
-    t.datetime "deleted_at"
-  end
-
-  create_table "widgets", :force => true do |t|
+  create_table "commands", :force => true do |t|
     t.string   "name"
-    t.integer  "price",       :limit => 10
+    t.text     "url"
     t.text     "description"
-    t.boolean  "is_in_stock"
+    t.integer  "uses",            :limit => 11, :default => 0
+    t.boolean  "spam",                          :default => false
+    t.datetime "last_use_date"
+    t.datetime "golden_egg_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

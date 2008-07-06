@@ -37,8 +37,8 @@ Rails::Initializer.run do |config|
   # Make sure the secret is at least 30 characters and all random, 
   # no regular words or you'll be exposed to dictionary attacks.
   config.action_controller.session = {
-    :session_key => '_blank_session',
-    :secret      => 'd27cc7f3bae1ef15fa00a9fad245f42057cff6113327d732a4dbd8e43c3eaba1a5bda246f882029653b71266c2015ef38ff4ce67616d8a0b2c220884edaba8c7'
+    :session_key => '_yubnub_session',
+    :secret      => '8932b76c55a8f90fd1856651213ac255924f9066ba46404b00fe683a00c409d7f7074188fa1ef7098444cd1e0ace2565c62bf45004d8bd4088a98e966230965c'
   }
 
   # Use the database for sessions instead of the cookie-based default,
@@ -60,14 +60,6 @@ Rails::Initializer.run do |config|
   # standard gems
   config.gem "haml", :version => ">= 2.0.0"
 
-  # ssl_requirement
-  # ------
-  # Allow controller actions to force SSL on specific parts of the site
-  # ------
-  config.gem 'jcnetdev-ssl_requirement', :version => '>= 1.0',
-                                         :lib => 'ssl_requirement',
-                                         :source => 'http://gems.github.com'
-
   # exception_notification
   # ------
   # Allows unhandled exceptions to be emailed on production
@@ -75,25 +67,7 @@ Rails::Initializer.run do |config|
   config.gem 'jcnetdev-exception_notification', :version => '>= 1.1',
                                                 :lib => 'exception_notification',
                                                 :source => 'http://gems.github.com'
-  
-  
-  # Rails Plugins (via gems)
 
-  # active_record_without_table
-  # ------
-  # Allows creation of ActiveRecord models that work without any database backend
-  # ------
-  config.gem 'jcnetdev-active_record_without_table', :version => '>= 1.1',
-                                                     :lib => 'active_record_without_table',
-                                                     :source => 'http://gems.github.com'
-  
-  # acts_as_state_machine
-  # ------
-  # Allows ActiveRecord models to define states and transition actions between them
-  # ------
-  config.gem 'jcnetdev-acts_as_state_machine', :version => '>= 2.1.0',
-                                               :lib => 'acts_as_state_machine',
-                                               :source => 'http://gems.github.com'
   
   # app_config
   # ------
@@ -118,24 +92,7 @@ Rails::Initializer.run do |config|
   config.gem 'jcnetdev-better_partials', :version => '>= 1.0',
                                          :lib => 'better_partials',
                                          :source => 'http://gems.github.com'
-  
 
-  # form_fu
-  # ------
-  # Allows easier rails form creation and processing
-  # ------
-  # config.gem 'neorails-form_fu', :version => '>= 1.0',
-  #                                :lib => 'form_fu',
-  #                                :source => 'http://gems.github.com'
-                                       
-  # paperclip
-  # ------
-  # Allows easy uploading of files with no dependencies
-  # ------
-  config.gem 'jcnetdev-paperclip', :version => '>= 1.0',
-                                   :lib => 'paperclip',
-                                   :source => 'http://gems.github.com'
-  
   # seed-fu
   # ------
   # Allows easier database seeding of tables
@@ -144,22 +101,6 @@ Rails::Initializer.run do |config|
                                  :lib => 'seed-fu',
                                  :source => 'http://gems.github.com'
 
-
-  # subdomain-fu
-  # ------
-  # Allows easier subdomain selection
-  # ------
-  config.gem 'jcnetdev-subdomain-fu', :version => '>= 0.0.2',
-                                      :lib => 'subdomain-fu',
-                                      :source => 'http://gems.github.com'
-  
-  # validates_as_email_address
-  # ------
-  # Allows for easy format validation of email addresses
-  # ------
-  config.gem 'jcnetdev-validates_as_email_address', :version => '>= 1.0',
-                                                    :lib => 'validates_as_email_address',
-                                                    :source => 'http://gems.github.com'
   
   # will_paginate
   # ------
@@ -168,16 +109,26 @@ Rails::Initializer.run do |config|
   config.gem 'jcnetdev-will_paginate', :version => '>= 2.3.2',
                                        :lib => 'will_paginate',
                                        :source => 'http://gems.github.com'
-  
-  # view_fu
-  # ------
-  # Adds view helpers for titles, stylesheets, javascripts, and common tags
-  # ------
-  # config.gem 'neorails-view_fu', :version => '>= 1.0',
-  #                                :lib => 'view_fu',
-  #                                :source => 'http://gems.github.com'
+
   
   # OPTIONAL PLUGINS
+
+  
+  # validates_as_email_address
+  # ------
+  # Allows for easy format validation of email addresses
+  # ------
+  # config.gem 'jcnetdev-validates_as_email_address', :version => '>= 1.0',
+  #                                                   :lib => 'validates_as_email_address',
+  #                                                   :source => 'http://gems.github.com'
+
+  # subdomain-fu
+  # ------
+  # Allows easier subdomain selection
+  # ------
+  # config.gem 'jcnetdev-subdomain-fu', :version => '>= 0.0.2',
+  #                                     :lib => 'subdomain-fu',
+  #                                     :source => 'http://gems.github.com'
 
   # acts_as_list
   # ------
@@ -186,15 +137,6 @@ Rails::Initializer.run do |config|
   # config.gem 'jcnetdev-acts_as_list', :version => '>= 1.0',
   #                                     :lib => 'acts_as_list',
   #                                     :source => 'http://gems.github.com'
-
-  # acts-as-readable
-  # ------
-  # Allows ActiveRecord Models to be easily marked as read / unread
-  # ------
-  # config.gem 'jcnetdev-acts-as-readable', :version => '>= 1.0',
-  #                                         :lib => 'acts_as_readable',
-  #                                         :source => 'http://gems.github.com'
-
 
   # sms-fu
   # ------
