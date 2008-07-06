@@ -23,6 +23,8 @@ View source at http://github.com/jcnetdev/yubnub
 
 == Installation Instructions
 
+You'll need the latest Rails Version (2.1) installed as a gem in order to run these steps.
+
 1) Get Codebase
 git clone git://github.com/jcnetdev/yubnub.git
 cd yubnub
