@@ -79,9 +79,9 @@ namespace :morph do
   # You can choose to release a different version than head by setting the 
   # Environment variable 'REL_VER' to the version to use.
   task :get_code do
-    # on_rollback do      
-    #   remove_files([morph_tmp_dir, 'code_update.tar.gz'])
-    # end
+    on_rollback do      
+      remove_files([morph_tmp_dir, 'code_update.tar.gz'])
+    end
       
     # Make sure we have a repo to work from!
     abort("***ERROR: Must specify the repository to check out from! See line #{repo_line_number} in #{__FILE__}.") if !repository
@@ -102,8 +102,10 @@ namespace :morph do
 
       # unpack our rubygems dependencies and inject them into the morph_tmp
       system("rake RAILS_ENV=production gems:unpack")
+      system("rake RAILS_ENV=production rails:freeze:gems")
       system("cp -Rf vendor/gems #{morph_tmp_dir}/vendor") 
-      
+      system("cp -Rf vendor/rails #{morph_tmp_dir}/vendor") 
+
       #create archive
       system("tar -C #{morph_tmp_dir} -czf code_update.tar.gz --exclude='./.*' .")
       abort('*** ERROR: Failed to tar the file for upload.') if $?.to_i != 0

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define do
 
   create_table "banned_url_patterns", :force => true do |t|
     t.string "pattern"
